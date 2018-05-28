@@ -1,0 +1,22 @@
+.entrada{
+    width: 500px;
+    
+}
+
+.linha{
+    width: 100%;
+    height: 2px;
+    border-bottom: 2px solid;
+    margin: 2px;
+    
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding-left: 10px;
+}
+
+button, th{
+    color: white;
+    background-color: dodgerblue;
+}

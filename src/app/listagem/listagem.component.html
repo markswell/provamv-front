@@ -1,0 +1,50 @@
+<div class="ui-g">
+  <div class="ui-g-4">
+    <label >Nome:</label><br/>
+    <input pInputText type="text" >
+  </div>
+  <div class="ui-g-4">
+      <label >CPF:</label><br/>
+      <input pInputText type="text" >
+  </div>
+  <div class="ui-g-2 ui-fluid">
+      <label ></label><br/>
+    <button class="botao">Pesquisar</button>
+  </div>
+  <div class="ui-g-2 ui-fluid">
+    <label ></label><br/>
+    <a href="pessoas/cadastrar">
+      <button class="botao">Cadastrar</button>
+    </a> 
+  </div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-12">  
+    <table class="ui-g-12">
+      <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>CPF</th>
+        <th>Idade</th>
+        <th>Quantidade de telefones</th>
+        <th>Ação</th>
+      </tr>
+      <tr *ngFor="let p of pessoas">
+          <td>{{ p.id }}</td>
+          <td>{{ p.nome }}</td>
+          <td>{{ p.email }}</td>
+          <td>{{ p.cpf }}</td>
+          <td>{{ p.dataNascimento }}</td>
+          <td>{{ p.telefones.length }}</td>
+          <td>
+            <a href="#">Editar</a>
+            <label >|</label>
+            <a href="#">Deletar</a>
+          </td>
+      </tr>
+    </table>
+  </div>
+</div>    
+

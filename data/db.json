@@ -1,0 +1,28 @@
+{
+    "pessoas" : [{
+        "id": 5,
+        "nome": "marcus venicios",
+        "cpf": "0022883",
+        "dataNascimento": "2018-05-27",
+        "email": "max@teste",  
+        "telefones": []  
+    },{
+        "id": 3,
+        "nome": "marcus venicios",
+        "cpf": "6542883",
+        "dataNascimento": "2018-05-27",
+        "email" : "max@teste",    
+        "telefones": [{
+                "id" : "5",
+                "ddd":"85",
+                "numero" : "8515616"
+            }]
+    },{
+        "id": 2,
+        "nome": "marcus venicios",
+        "cpf": "9843883",
+        "dataNascimento": "2018-05-27",
+        "email" : "max@teste", 
+        "telefones": []   
+    }]
+}

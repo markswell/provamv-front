@@ -1,0 +1,10 @@
+.botao, th{
+    color: white;
+    background-color: dodgerblue;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+    padding-left: 10px;
+}

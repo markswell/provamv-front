@@ -1,0 +1,56 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+      <div class="ui-g-6">
+          <label >Nome:</label><br/>
+          <input pInputText type="text" class="entrada">
+      </div>
+      <div class="ui-g-6 entrada">
+            <label >CPF:</label><br/>
+            <input pInputText type="text" class="entrada">
+      </div>
+      <div class="ui-g-6">
+          <label >E-mail:</label><br/>
+          <input pInputText type="text" class="entrada">
+      </div>
+      <div class="ui-g-6 entrada">
+            <label >Data nascimento:</label><br/>
+            <input pInputText type="text" class="entrada">
+      </div>  
+  </div>
+  
+</div>
+<div class="linha"></div>
+<div class="ui-g">
+    <div class="ui-g-12">
+      <div class="ui-g-8">
+        <div class="ui-g-1" >
+          <label >DDD:</label><br/>
+          <input type="text">
+        </div>
+        <div class="ui-g-5">
+          <label >Telefone:</label><br/>
+          <input type="text">
+        </div>
+        <div class="ui-g-6">
+            <label ></label><br/>
+          <button >{{ botao }}</button>  
+        </div>  
+    </div>
+    <div class="ui-g-12">  
+        <table class="ui-g-12">
+          <tr>
+            <th>Id</th>
+            <th>DDD</th>
+            <th>Telefone</th>
+            <th>Ação</th>
+          </tr>
+          <tr *ngFor="let t of telefones">
+              <td>{{ t.id }}</td>
+              <td>{{ t.ddd }}</td>
+              <td>{{ t.numero }}</td>
+              <td><a href="#">Deletar</a></td>
+             
+          </tr>
+        </table>
+      </div>
+ </div>
