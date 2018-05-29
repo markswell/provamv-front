@@ -25,3 +25,10 @@ th{
     color: white;
     background-color: dodgerblue;
 }
+
+.fundo{
+    background-color: dodgerblue;
+    color: white;
+    font-size: 30px;
+    padding-left: 20px;
+}

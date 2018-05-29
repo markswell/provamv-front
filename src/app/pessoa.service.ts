@@ -16,6 +16,14 @@ export class PessoaService {
     return this.http.get('http://localhost:8080/pessoas/' + id);
   }
 
+  consultarPessoaNome(nome : string) {
+    return this.http.get('http://localhost:8080/pessoas/nome/' + nome);
+  }
+
+  consultarPessoaCpf(cpf : string) {
+    return this.http.get('http://localhost:8080/pessoas/cpf/' + cpf);
+  }
+
   deletarPessoa(id : number) {
     console.log('entrou no metodo no delete');
     return this.http.delete('http://localhost:8080/pessoas/' + id);

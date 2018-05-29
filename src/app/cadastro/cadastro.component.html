@@ -1,21 +1,24 @@
+    
+<div class="fundo">{{ titulo }}</div>
 <div class="ui-g">
   <div class="ui-g-12">
       <div class="ui-g-6">
-          <label >Nome:</label><br/>
-          <input type="text" class="entrada" value="{{ pessoa.nome }}" #nome>
+        <label >Nome:</label><br/>
+        <input type="text" class="entrada" value="{{ pessoa.nome }}" #nome required>
       </div>
       <div class="ui-g-6 entrada">
-            <label >CPF:</label><br/>
-            <input type="text" class="entrada" value="{{ pessoa.cpf }}" placeholder="000.000.000-00" #cpf>
+        <label >CPF:</label><br/>
+        <input type="text" class="entrada" required value="{{ pessoa.cpf }}" 
+        placeholder="000.000.000-00" #cpf>
       </div>
       <div class="ui-g-6">
-          <label >E-mail:</label><br/>
-          <input type="text" class="entrada"  value="{{ pessoa.email }}"  #email>
-          
+        <label >E-mail:</label><br/>
+        <input type="text" class="entrada" required  value="{{ pessoa.email }}"  #email>
+        
       </div>
       <div class="ui-g-6 entrada">
-            <label >Data nascimento:</label><br/>
-            <input type="text" class="entrada"  value="{{ pessoa.dataNascimento }}" placeholder="00/00/0000" #data>
+        <label >Data nascimento:</label><br/>
+        <input type="text" class="entrada" required  value="{{ pessoa.dataNascimento }}" placeholder="00/00/0000" #data>
       </div>  
   </div>
   

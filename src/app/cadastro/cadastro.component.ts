@@ -16,6 +16,7 @@ export class CadastroComponent implements OnInit{
   tel = new Telefone;
   telefones = [];
   botao = 'Cadastrar';
+  titulo = 'Cadastro de Pessoa';
 
   constructor(
     private route : ActivatedRoute,
@@ -38,6 +39,7 @@ export class CadastroComponent implements OnInit{
         this.telefones = this.pessoa.telefones; 
         if(this.pessoa.nome != ''){
           this.botao = 'Atualiza';
+          this.titulo = 'Editar dados de Pessoa';
         }         
       },
     (err)=>{
@@ -96,17 +98,20 @@ export class CadastroComponent implements OnInit{
   }
 
   deletar(t : Telefone){
-
+    if(t.id)
     this.service.deletarTelefone(t.id).subscribe(
         (json) => {},
         (err)=>{
            console.log(err);
     }); 
-    this.telefones.forEach((te)=>{
-        if(t.id === te.id){
-        this.telefones.splice(te);
-     }
-   } );
-  }
 
+    let posicao = 0;
+    while(posicao <= this.telefones.length){
+      if(t.numero === this.telefones[posicao].numero){
+        this.telefones.splice(posicao);
+      }
+      posicao ++;  
+    }
+
+  }
 }

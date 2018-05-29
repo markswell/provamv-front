@@ -1,15 +1,16 @@
+<div class="fundo">Listagem de Pessoas</div>
 <div class="ui-g">
   <div class="ui-g-4">
     <label >Nome:</label><br/>
-    <input pInputText type="text" >
+    <input pInputText type="text" #nome>
   </div>
   <div class="ui-g-4">
       <label >CPF:</label><br/>
-      <input pInputText type="text" >
+      <input pInputText type="text" #cpf>
   </div>
   <div class="ui-g-2 ui-fluid">
       <label ></label><br/>
-    <button class="botao">Pesquisar</button>
+    <button class="botao" on-click="pesquisar(nome.value, cpf.value)">Pesquisar</button>
   </div>
   <div class="ui-g-2 ui-fluid">
     <label ></label><br/>
