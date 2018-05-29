@@ -51,7 +51,8 @@ export class CadastroComponent implements OnInit{
     this.pessoa.dataNascimento = dataNascimento.value;
     this.pessoa.email = email.value;
     this.pessoa.telefones = this.telefones;
-    if(this.pessoa.id == null){
+    
+    if(this.pessoa.id === undefined){
       this.casdastrar(); 
     }else{
       this.atualizar();
@@ -95,9 +96,15 @@ export class CadastroComponent implements OnInit{
   }
 
   deletar(t : Telefone){
-   this.telefones.forEach((te)=>{
-     if(t.id === te.id){
-       this.telefones.splice(te);
+
+    this.service.deletarTelefone(t.id).subscribe(
+        (json) => {},
+        (err)=>{
+           console.log(err);
+    }); 
+    this.telefones.forEach((te)=>{
+        if(t.id === te.id){
+        this.telefones.splice(te);
      }
    } );
   }
