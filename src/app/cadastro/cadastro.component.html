@@ -2,19 +2,19 @@
   <div class="ui-g-12">
       <div class="ui-g-6">
           <label >Nome:</label><br/>
-          <input pInputText type="text" class="entrada">
+          <input type="text" class="entrada" value="{{ pessoa.nome }}" #nome>
       </div>
       <div class="ui-g-6 entrada">
             <label >CPF:</label><br/>
-            <input pInputText type="text" class="entrada">
+            <input type="text" class="entrada" value="{{ pessoa.cpf }}" #cpf>
       </div>
       <div class="ui-g-6">
           <label >E-mail:</label><br/>
-          <input pInputText type="text" class="entrada">
+          <input type="text" class="entrada"  value="{{ pessoa.email }}" #email>
       </div>
       <div class="ui-g-6 entrada">
             <label >Data nascimento:</label><br/>
-            <input pInputText type="text" class="entrada">
+            <input type="text" class="entrada"  value="{{ pessoa.dataNascimento }}" #data>
       </div>  
   </div>
   
@@ -25,15 +25,15 @@
       <div class="ui-g-8">
         <div class="ui-g-1" >
           <label >DDD:</label><br/>
-          <input type="text">
+          <input type="text" #ddd >
         </div>
         <div class="ui-g-5">
           <label >Telefone:</label><br/>
-          <input type="text">
+          <input type="text" #numero>
         </div>
         <div class="ui-g-6">
             <label ></label><br/>
-          <button >{{ botao }}</button>  
+          <button class="botao" on-click="adicionarTel(ddd, numero)">Adiconar</button>  
         </div>  
     </div>
     <div class="ui-g-12">  
@@ -48,9 +48,11 @@
               <td>{{ t.id }}</td>
               <td>{{ t.ddd }}</td>
               <td>{{ t.numero }}</td>
-              <td><a href="#">Deletar</a></td>
+            <!-- <a href="" >Deletar</a> -->
+              <td><button type="button" class="btn btn-link" on-click="deletar(t)">Deletar</button></td>
              
           </tr>
         </table>
+        <button class="ui-g-1 botao"  (click)="voltar()" on-click="adicionar(nome,cpf,data,email)" >{{ botao }}</button>
       </div>
  </div>

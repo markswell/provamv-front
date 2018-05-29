@@ -16,7 +16,12 @@ table, th, td {
     padding-left: 10px;
 }
 
-button, th{
+th{
+    color: white;
+    background-color: dodgerblue;
+}
+.botao{
+    margin-top: 20px;
     color: white;
     background-color: dodgerblue;
 }

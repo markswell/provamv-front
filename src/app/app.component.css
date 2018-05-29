@@ -1,4 +1,6 @@
 .fundo{
     background-color: dodgerblue;
-    color: white
+    color: white;
+    font-size: 30px;
+    padding-left: 20px;
 }

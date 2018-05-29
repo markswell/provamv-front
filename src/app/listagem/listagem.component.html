@@ -13,7 +13,7 @@
   </div>
   <div class="ui-g-2 ui-fluid">
     <label ></label><br/>
-    <a href="pessoas/cadastrar">
+    <a [routerLink]="pessoas/cadastrar">
       <button class="botao">Cadastrar</button>
     </a> 
   </div>
@@ -39,9 +39,9 @@
           <td>{{ p.dataNascimento }}</td>
           <td>{{ p.telefones.length }}</td>
           <td>
-            <a href="#">Editar</a>
+            <a [routerLink]="['/pessoas', p.id]">Editar</a>
             <label >|</label>
-            <a href="#">Deletar</a>
+            <button type="button" class="btn btn-link" on-click="deletar(p.id)">Deletar</button>
           </td>
       </tr>
     </table>

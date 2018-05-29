@@ -11,8 +11,10 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { PessoaService } from './pessoa.service';
 
 const routes : Routes = [
+  {path : '', redirectTo: 'pessoas', pathMatch: 'full'},
   {path : 'pessoas', component: ListagemComponent},
-  {path : 'pessoas/cadastrar', component: CadastroComponent}
+  {path : 'pessoas/cadastrar', component: CadastroComponent},
+  {path : 'pessoas/:id', component: CadastroComponent}
 
 ];
 
@@ -21,6 +23,7 @@ const routes : Routes = [
     AppComponent,
     ListagemComponent,
     CadastroComponent
+  
   ],
   imports: [
     BrowserModule,
