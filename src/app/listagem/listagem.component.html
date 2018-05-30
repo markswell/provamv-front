@@ -37,7 +37,7 @@
           <td>{{ p.nome }}</td>
           <td>{{ p.email }}</td>
           <td>{{ p.cpf }}</td>
-          <td>{{ p.dataNascimento }}</td>
+          <td>{{ p.dataNascimento | date : 'dd/MM/y'}}</td>
           <td>{{ p.telefones.length }}</td>
           <td>
             <a [routerLink]="['/pessoas', p.id]">Editar</a>

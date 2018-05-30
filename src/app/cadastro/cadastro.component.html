@@ -18,7 +18,7 @@
       </div>
       <div class="ui-g-6 entrada">
         <label >Data nascimento:</label><br/>
-        <input type="text" class="entrada" required  value="{{ pessoa.dataNascimento }}" placeholder="00/00/0000" #data>
+        <input type="date" class="entrada" required  value="{{ pessoa.dataNascimento }}" placeholder="00/00/0000" #data>
       </div>  
   </div>
   
@@ -56,6 +56,6 @@
              
           </tr>
         </table>
-        <button class="ui-g-1 botao"  (click)="voltar()" on-click="adicionar(nome,cpf,data,email)" >{{ botao }}</button>
+        <button class="ui-g-1 botao"   on-click="adicionar(nome,cpf,data ,email)" >{{ botao }}</button>
       </div>
  </div>

@@ -59,7 +59,7 @@ export class CadastroComponent implements OnInit{
     }else{
       this.atualizar();
     }
-    
+    this.voltar();
   }
 
   casdastrar(){
