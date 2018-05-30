@@ -50,7 +50,7 @@ export class CadastroComponent implements OnInit{
   adicionar(nome : any, cpf : any, dataNascimento : any, email : any){
     this.pessoa.nome = nome.value;
     this.pessoa.cpf = cpf.value;
-    this.pessoa.dataNascimento = dataNascimento.value;
+    this.pessoa.dataNascimento = dataNascimento.value.split('/').reverse().join('-');;
     this.pessoa.email = email.value;
     this.pessoa.telefones = this.telefones;
     
