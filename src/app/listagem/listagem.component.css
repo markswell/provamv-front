@@ -8,9 +8,18 @@
     font-size: 30px;
     padding-left: 20px;
 }
-
+table{
+    width:80%;
+    margin-left: 100px;;
+    margin-right: 100px;
+}
 
 table, th, td {
     border: 1px solid black;
     padding-left: 10px;
+}
+.mesma-linha{
+    float: left;
+    margin-left: 5%;
+    margin-bottom: 5%;
 }

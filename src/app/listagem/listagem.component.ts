@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {DataTableModule} from 'primeng/datatable';
 import { PessoaService } from '../pessoa.service';
 import { RouterModule } from '@angular/router';
 

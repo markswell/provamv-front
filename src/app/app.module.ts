@@ -5,8 +5,6 @@ import { ListagemComponent } from './listagem/listagem.component';
 import { Routes, RouterModule } from '@angular/router';
 import {  HttpModule } from '@angular/http';
 
-import {ButtonModule} from 'primeng/button';
-import {InputTextModule} from 'primeng/inputtext';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { PessoaService } from './pessoa.service';
 

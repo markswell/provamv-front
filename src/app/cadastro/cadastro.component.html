@@ -1,61 +1,50 @@
-    
 <div class="fundo">{{ titulo }}</div>
-<div class="ui-g">
-  <div class="ui-g-12">
-      <div class="ui-g-6">
-        <label >Nome:</label><br/>
-        <input type="text" class="entrada" value="{{ pessoa.nome }}" #nome required>
-      </div>
-      <div class="ui-g-6 entrada">
-        <label >CPF:</label><br/>
-        <input type="text" class="entrada" required value="{{ pessoa.cpf }}" 
-        placeholder="000.000.000-00" #cpf>
-      </div>
-      <div class="ui-g-6">
-        <label >E-mail:</label><br/>
-        <input type="text" class="entrada" required  value="{{ pessoa.email }}"  #email>
-        
-      </div>
-      <div class="ui-g-6 entrada">
-        <label >Data nascimento:</label><br/>
-        <input type="text" class="entrada" required  value="{{ pessoa.dataNascimento | date: 'dd/MM/y' }}" placeholder="00/00/0000" #data>
-      </div>  
+<div class="espacotop">
+  <div class="flutuante entrada ">
+    <label >Nome:</label><br/>
+    <input type="text" class="campo"  value="{{ pessoa.nome }}" #nome required>
   </div>
-  
+  <div class="flutuante entrada ">
+    <label >CPF:</label><br/>
+    <input type="text" class="campo" required value="{{ pessoa.cpf }}" placeholder="000.000.000-00" #cpf>
+  </div>
+  <div class="flutuante entrada">
+    <label >E-mail:</label><br/>
+    <input type="text"  class="campo" required  value="{{ pessoa.email }}"  #email>
+  </div>
+  <div class="entrada flutuante">
+    <label >Data nascimento:</label><br/>
+    <input type="text"  class="campo" required  value="{{ pessoa.dataNascimento | date: 'dd/MM/y' }}" placeholder="00/00/0000" #data>
+  </div>
 </div>
-<div class="linha"></div>
-<div class="ui-g">
-    <div class="ui-g-12">
-      <div class="ui-g-8">
-        <div class="ui-g-1" >
-          <label >DDD:</label><br/>
-          <input type="text" #ddd >
-        </div>
-        <div class="ui-g-5">
-          <label >Telefone:</label><br/>
-          <input type="text" #numero>
-        </div>
-        <div class="ui-g-6">
-            <label ></label><br/>
-          <button class="botao" on-click="adicionarTel(ddd, numero)">Adiconar</button>  
-        </div>  
+  <div class="meiatela entrada">
+    <div class="flutuante ddd" >
+      <label >DDD:</label><br/>
+      <input class="ddd" type="text" #ddd >
     </div>
-    <div class="ui-g-12">  
-        <table class="ui-g-12">
-          <tr>
-            <th>Id</th>
-            <th>DDD</th>
-            <th>Telefone</th>
-            <th>Ação</th>
-          </tr>
-          <tr *ngFor="let t of telefones">
-              <td>{{ t.id }}</td>
-              <td>{{ t.ddd }}</td>
-              <td>{{ t.numero }}</td>
-              <td><button type="button" class="btn btn-link" on-click="deletar(t)">Deletar</button></td>
-             
-          </tr>
-        </table>
-        <button class="ui-g-1 botao"   on-click="adicionar(nome,cpf,data ,email); " >{{ botao }}</button>
-      </div>
- </div>
+    <div class="flutuante conteinertelefone">
+      <label >Telefone:</label><br/>
+      <input class="telefone" type="text" #numero>
+    </div>
+    <div class="flutuante">
+      <label ></label><br/>
+      <button class="botao " on-click="adicionarTel(ddd, numero)">Adiconar</button>  
+    </div>  
+  </div>
+  <div class="espacotop">
+    <table >
+      <tr>
+        <th>Id</th>
+        <th>DDD</th>
+        <th>Telefone</th>
+        <th>Ação</th>
+      </tr>
+      <tr *ngFor="let t of telefones">
+        <td>{{ t.id }}</td>
+        <td>{{ t.ddd }}</td>
+        <td>{{ t.numero }}</td>
+        <td><button type="button" class="btn btn-link" on-click="deletar(t)">Deletar</button></td>
+      </tr>
+    </table>
+  </div>
+  <button class="botao"   on-click="adicionar(nome,cpf,data ,email); " >{{ botao }}</button>

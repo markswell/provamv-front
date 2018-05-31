@@ -8,7 +8,10 @@ import { Telefone } from '../classes/Telefone';
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  styleUrls: [
+    './reset.css',
+    './cadastro.component.css'
+  ]
 })
 export class CadastroComponent implements OnInit{
 

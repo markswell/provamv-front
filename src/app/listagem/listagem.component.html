@@ -1,28 +1,27 @@
 <div class="fundo">Listagem de Pessoas</div>
 <div class="ui-g">
-  <div class="ui-g-4">
+  <div class="mesma-linha">
     <label >Nome:</label><br/>
     <input pInputText type="text" #nome>
   </div>
-  <div class="ui-g-4">
+  <div class="mesma-linha">
       <label >CPF:</label><br/>
       <input pInputText type="text" #cpf>
   </div>
-  <div class="ui-g-2 ui-fluid">
-      <label ></label><br/>
+  <div class="mesma-linha abaixo" >
+      <button hidden="true"  class="botao"></button><br>
     <button class="botao" on-click="pesquisar(nome.value, cpf.value)">Pesquisar</button>
   </div>
-  <div class="ui-g-2 ui-fluid">
-    <label ></label><br/>
+  <div class="mesma-linha ">
     <a [routerLink]="pessoas/cadastrar">
+      <button hidden="true"  class="botao"></button><br>
       <button class="botao">Cadastrar</button>
     </a> 
   </div>
 </div>
 
 <div class="ui-g">
-  <div class="ui-g-12">  
-    <table class="ui-g-12">
+    <table >
       <tr>
         <th>Id</th>
         <th>Nome</th>
@@ -46,6 +45,5 @@
           </td>
       </tr>
     </table>
-  </div>
 </div>    
 

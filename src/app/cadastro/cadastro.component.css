@@ -1,6 +1,40 @@
 .entrada{
-    width: 500px;
+    width: 35%;
+    margin-left: 10%;
     
+}
+.meiatela{
+    width: 50%;
+}
+.ddd{
+    width: 25%;
+}
+.espacotop{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.telefone{
+    width:100%;
+}
+
+.conteinertelefone{
+    width: 30%;
+}
+.campo{
+    width: 100%;
+   
+}
+
+.flutuante{
+    float: left;
+}
+.caixa{
+    width: 100%;
+    padding-left: 100px;
+    padding-top: 50px;;
+}
+input{
+    width: 40%;
 }
 
 .linha{
@@ -8,12 +42,15 @@
     height: 2px;
     border-bottom: 2px solid;
     margin: 2px;
-    
+}
+table{
+    width:80%;
+    margin-top: 40px;
 }
 
 table, th, td {
     border: 1px solid black;
-    padding-left: 10px;
+    margin-left: 10%;
 }
 
 th{
@@ -24,6 +61,7 @@ th{
     margin-top: 20px;
     color: white;
     background-color: dodgerblue;
+    margin-left: 10%;
 }
 
 .fundo{
