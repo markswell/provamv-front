@@ -1,9 +1,10 @@
 # ProvamvFront
 
-- projeto de front quase completo
+> Front-end para CRUD de pessoas e telefones
 
-- faltando validar os campos pois até o momento estou sem internet e não pude baixar os componetes de formatação de datas
+## How to install?
 
-- devido este impecilio padrão para validação de data permanece yyyy-MM-dd
-
-- comunicando com backend na mesma maquina
+- Clonar este projeto
+- Possuir Npm/Node instalado
+- Seguir as intruções de instalação do [Angular CLI](https://cli.angular.io/)
+- Instalar [Back-end](https://github.com/markswell/provamv-back)
