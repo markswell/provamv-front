@@ -1,27 +1,26 @@
 <div class="fundo">Listagem de Pessoas</div>
-<div class="ui-g">
-  <div class="mesma-linha">
-    <label >Nome:</label><br/>
-    <input pInputText type="text" #nome>
-  </div>
-  <div class="mesma-linha">
-      <label >CPF:</label><br/>
+<div class="content">
+  <div class="ui-g clearfix form-pesquisar">
+    <div>
+      <label>Nome:</label>
+      <br/>
+      <input pInputText type="text" #nome>
+    </div>
+    <div>
+      <label>CPF:</label>
+      <br/>
       <input pInputText type="text" #cpf>
+    </div>
+    <div>
+      <button class="botao" (click)="pesquisar(nome.value, cpf.value)">Pesquisar</button>
+    </div>
+    <div>
+      <button [routerLink]="['cadastrar']" class="botao">Cadastrar</button>
+    </div>
   </div>
-  <div class="mesma-linha abaixo" >
-      <button hidden="true"  class="botao"></button><br>
-    <button class="botao" on-click="pesquisar(nome.value, cpf.value)">Pesquisar</button>
-  </div>
-  <div class="mesma-linha ">
-    <a [routerLink]="pessoas/cadastrar">
-      <button hidden="true"  class="botao"></button><br>
-      <button class="botao">Cadastrar</button>
-    </a> 
-  </div>
-</div>
 
-<div class="ui-g">
-    <table >
+  <div class="ui-g">
+    <table>
       <tr>
         <th>Id</th>
         <th>Nome</th>
@@ -32,18 +31,18 @@
         <th>Ação</th>
       </tr>
       <tr *ngFor="let p of pessoas">
-          <td>{{ p.id }}</td>
-          <td>{{ p.nome }}</td>
-          <td>{{ p.email }}</td>
-          <td>{{ p.cpf }}</td>
-          <td>{{ p.dataNascimento | date : 'dd/MM/y'}}</td>
-          <td>{{ p.telefones.length }}</td>
-          <td>
-            <a [routerLink]="['/pessoas', p.id]">Editar</a>
-            <label >|</label>
-            <button type="button" class="btn btn-link" on-click="deletar(p.id)">Deletar</button>
-          </td>
+        <td>{{ p.id }}</td>
+        <td>{{ p.nome }}</td>
+        <td>{{ p.email }}</td>
+        <td>{{ p.cpf }}</td>
+        <td>{{ p.dataNascimento | date : 'dd/MM/y'}}</td>
+        <td>{{ p.telefones.length }}</td>
+        <td>
+          <a [routerLink]="['/pessoas', p.id]">Editar</a>
+          <label>|</label>
+          <button type="button" class="btn btn-link" on-click="deletar(p.id)">Deletar</button>
+        </td>
       </tr>
     </table>
-</div>    
-
+  </div>
+</div>

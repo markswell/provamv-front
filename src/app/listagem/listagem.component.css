@@ -1,25 +1,44 @@
-.botao, th{
+.botao,
+th {
     color: white;
     background-color: dodgerblue;
 }
-.fundo{
+
+.fundo {
     background-color: dodgerblue;
     color: white;
     font-size: 30px;
     padding-left: 20px;
 }
-table{
-    width:80%;
-    margin-left: 100px;;
-    margin-right: 100px;
+
+table {
+    width: 100%;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid black;
     padding-left: 10px;
 }
-.mesma-linha{
+
+.mesma-linha {
     float: left;
-    margin-left: 5%;
-    margin-bottom: 5%;
+}
+
+.content {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.ui-g {
+    width: 100%;
+}
+
+.form-pesquisar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 30px 0;
 }

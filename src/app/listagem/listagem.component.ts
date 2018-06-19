@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PessoaService } from '../pessoa.service';
-import { RouterModule } from '@angular/router';
-
 
 @Component({
   selector: 'app-listagem',
@@ -10,54 +8,52 @@ import { RouterModule } from '@angular/router';
 })
 export class ListagemComponent implements OnInit {
 
-  pessoas =  [];  
+  pessoas = [];
 
-  constructor(private pessoaService : PessoaService){}
+  constructor(private pessoaService: PessoaService) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.pessoaService.consultarPessoas()
-    .subscribe((json) => {
-      this.pessoas = json.json();
-    });
+      .subscribe((json) => {
+        this.pessoas = json.json();
+      });
   }
 
-  deletar(id : number){
+  deletar(id: number) {
 
     this.pessoaService.deletarPessoa(id).subscribe(
-      (json) => {},(err)=>{
-          console.log(err);
-        });
+      (json) => { }, (err) => {
+        console.log(err);
+      });
     location.reload();
   }
 
-  pesquisar(nome : string, cpf : string){
-    if(cpf === ''){
+  pesquisar(nome: string, cpf: string) {
+    if (cpf === '') {
       this.pesquisarNome(nome);
-    }else {
+    } else {
       this.pesquisarCpf(cpf);
     }
   }
 
-  pesquisarCpf(cpf : string){
+  pesquisarCpf(cpf: string) {
     this.pessoaService.consultarPessoaCpf(cpf)
-    .subscribe(
-      (json) => {
-        this.pessoas = json.json();
-      },(err)=>{
-        alert('nemhum, resultado encontrado');
-        location.reload();
+      .subscribe(
+        (json) => {
+          this.pessoas = json.json();
+        }, (err) => {
+          alert('nemhum, resultado encontrado');
         });
   }
 
-  pesquisarNome(nome : string){
+  pesquisarNome(nome: string) {
     this.pessoaService.consultarPessoaNome(nome)
-    .subscribe(
-      (json) => {
-        this.pessoas = json.json();
-      },(err)=>{
+      .subscribe(
+        (json) => {
+          this.pessoas = json.json();
+        }, (err) => {
           alert('nemhum, resultado encontrado');
-          location.reload();
         });
   }
-  
+
 }

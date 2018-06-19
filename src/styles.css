@@ -9,3 +9,8 @@
     clear: both;
     display: table;
 }
+
+button {
+    border: none;
+    outline: none;
+}
